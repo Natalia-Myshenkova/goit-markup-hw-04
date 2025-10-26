@@ -206,13 +206,18 @@ background-position: center;
   width: calc((100% - 72px) / 4);
 }
 
-.services-icon {
+.icon-wrapper {
+  display: inline-block;  
   border: 1px solid #8e8f99;
   border-radius: 4px;
   background: #f4f4fd;
   padding: 24px 100px;
   width: 100%;
+  justify-content: center;
+  margin-bottom: 8px;
 }
+
+
 
 .services-title {
   font-weight: 500;
