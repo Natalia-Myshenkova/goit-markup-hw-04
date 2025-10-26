@@ -135,6 +135,13 @@ address {
   align-items: center;         
   padding: 188px 0; 
   background-color: #2e2f42;
+  background: linear-gradient(
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)
+  ),
+  url("/images/first-section-people-office.jpg");
+background-size: cover;
+background-position: center;
 }
 
 .first-section-color .container {
@@ -197,6 +204,14 @@ address {
 
 .service-item {
   width: calc((100% - 72px) / 4);
+}
+
+.services-icon {
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  background: #f4f4fd;
+  padding: 24px 100px;
+  width: 100%;
 }
 
 .services-title {
