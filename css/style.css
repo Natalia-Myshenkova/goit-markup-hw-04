@@ -354,11 +354,6 @@ address {
   color: #fff;;
 }
 
-.icon-list .link:hover .icon,
-.icon-list .link:focus .icon {
-  fill: #404bbf;
-}
-
 
 .portfolio-group {
   display: flex;
