@@ -449,9 +449,9 @@ address {
 
 .footer-info {
   display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: flex-start; 
+  flex-direction: row;
+  gap: 120px;
+  
 }
 
 
@@ -474,3 +474,48 @@ address {
   letter-spacing: 0.02em;
   max-width: 264px; 
 }
+
+.media-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.social-media-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+
+.social-media-icons .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background-color 250ms ease-in-out; 
+  color: #fff;
+}
+
+
+.social-media-icons .link .icon {
+  width: 16px;
+  height: 16px;
+  fill: #fff;
+  transition: fill 250ms ease-in-out;
+}
+
+
+.social-media-icons .link:hover,
+.social-media-icons .link:focus {
+  background-color:  #31d0aa;
+}
+
