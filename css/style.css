@@ -49,6 +49,9 @@ a {
 
 .header-content {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 
+  0px 1px 1px rgba(46, 47, 66, 0.16), 
+  0px 1px 6px rgba(46, 47, 66, 0.08); 
 }
 
 .container {
@@ -107,6 +110,14 @@ a {
 .header-link:hover::after,
 .header-link.active::after {
   width: 100%;
+  bottom: -1px; 
+  height: 4px; 
+  background-color: #404bbf;
+  border-radius: 2px; 
+}
+
+.header-link.active {
+  color: #404bbf; 
 }
 
 
@@ -134,6 +145,7 @@ a {
   font-size: 16px;
   letter-spacing: 0.02em;
   color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .header-contact-info:hover,
@@ -160,7 +172,12 @@ address {
   padding: 188px 0;
   background: 
     linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url("/images/first-section-people-office.jpg") center/cover no-repeat;
+    url("/images/first-section-people-office.jpg");
+  max-width: 1440px;
+  background-repeat: no-repeat; 
+  background-position: center; 
+  background-size: cover; 
+
 }
 
 
@@ -193,6 +210,7 @@ address {
   border: none;
   padding: 16px 32px;
   min-width: 169px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .service-button:hover {
@@ -227,12 +245,14 @@ address {
 }
 
 .icon-wrapper {
-  display: inline-block;  
+  display: flex;  
+  align-items: center; 
   border: 1px solid #8e8f99;
   border-radius: 4px;
   background: #f4f4fd;
   padding: 24px 100px;
   width: 100%;
+  height: 112px; 
   justify-content: center;
   margin-bottom: 8px;
 }
@@ -336,7 +356,7 @@ address {
   background-color: #4d5ae5;
   border-radius: 50%;
   text-decoration: none;
-  transition: background-color 250ms ease-in-out; /* ✅ плавна зміна */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
   color: #fff;
 }
 
@@ -344,14 +364,14 @@ address {
 .icon-list .link .icon {
   width: 16px;
   height: 16px;
-  fill: #fff;
+  fill:  #f4f4fd;
   transition: fill 250ms ease-in-out;
 }
 
 
 .icon-list .link:hover,
 .icon-list .link:focus {
-  background-color: #3a46c0;
+  background-color: #404bbf;
 }
 
 
@@ -406,18 +426,20 @@ address {
 }
 
 
-.overlay-title {
-  margin: 0 0 8px 0;
-  font-size: 20px;
-  font-weight: 600;
-  color: #fff;
-}
-
 .overlay-text {
+  position: absolute; 
+  top: 0; 
   margin: 0;
-  font-size: 14px;
-  line-height: 1.4;
-  color: #f4f4fd;
+  font-size: 16px; 
+  line-height: 1.5;
+  letter-spacing: 0.02em; 
+  color: #f4f4fd; 
+  padding: 40px 32px;
+  background-color: #4d5ae5; 
+  height: 100%; 
+  width: 100%; 
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 
@@ -449,11 +471,14 @@ address {
 
 .footer-info {
   display: flex;
-  flex-direction: row;
-  gap: 120px;
+  align-items: baseline;
   
 }
 
+
+.logo-section {
+  margin-right: 120px 
+}
 
 .logo-footer {
   font-family: "Raleway", sans-serif;
@@ -481,18 +506,17 @@ address {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #fff;
+  color: #FFFFFF;
   margin-bottom: 16px;
 }
 
 .social-media-icons {
   display: flex;
-  flex-direction: row;
   gap: 16px;
 }
 
 
-.social-media-icons .link {
+.icon-media-list{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -501,8 +525,7 @@ address {
   background-color: #4d5ae5;
   border-radius: 50%;
   text-decoration: none;
-  transition: background-color 250ms ease-in-out; 
-  color: #fff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -513,9 +536,22 @@ address {
   transition: fill 250ms ease-in-out;
 }
 
+.link {
+  width: 100%;
+  height: 100%;
+  background-color:  #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+}
 
-.social-media-icons .link:hover,
-.social-media-icons .link:focus {
+.social-icon {
+  fill: #f4f4fd;
+}
+
+.icon-media-list .link:hover,
+.icon-media-list .link:focus {
   background-color:  #31d0aa;
 }
 
